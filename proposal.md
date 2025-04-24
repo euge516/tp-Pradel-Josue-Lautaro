@@ -1,52 +1,54 @@
 # Propuesta TP DSW
 
-## Grupo
+## Grupo:No especificado
 ### Integrantes
 * legajo - Apellido(s), Nombre(s)
+* 39932 -   Eugene, Pradel --> eugedev516@gmail.com
+* 52523 - Kalkov Lautaro --> lautarokalkov@gmail.com
+* 47007 - Josue Micael, Herrera --> josueherrera790@gmail.com
 
 ### Repositorios
-* [frontend app](http://hyperlinkToGihubOrGitlab)
-* [backend app](http://hyperlinkToGihubOrGitlab)
-*Nota*: si utiliza un monorepo indicar un solo link con fullstack app.
+* [frontend app](https://github.com/euge516/front.git)
+* [backend app](https://github.com/euge516/back-end.git)
 
-## Tema
-### Descripción
-*2 a 6 líneas describiendo el negocio (menos es más)*
+## Tema: Systema de gestion de producto(E-commerce)
+### Descripción:"El sistema va a permitir al cliente de realizar su compra online, y ver su historial de compra y sumar punto para que puede canjearlo en un futuro. Y para el dueno le va a permitir de gestion sus productos mejor, ver los productos mas vendido etc."
+
 
 ### Modelo
-![imagen del modelo]()
+![img](C://Users//prade//Downloads//gestiondeproducto.drawio.png)
 
-*Nota*: incluir un link con la imagen de un modelo, puede ser modelo de dominio, diagrama de clases, DER. Si lo prefieren pueden utilizar diagramas con [Mermaid](https://mermaid.js.org) en lugar de imágenes.
+![Link](https://app.diagrams.net/#G1UTT0csvfq2Sclc_0FIJ-2UyeDlAqiTds#%7B%22pageId%22%3A%229f46799a-70d6-7492-0946-bef42562c5a5%22%7D)
 
 ## Alcance Funcional 
 
 ### Alcance Mínimo
 
-*Nota*: el siguiente es un ejemplo para un grupo de 3 integrantes para un sistema de hotel. El 
 
 Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad|
-|CRUD dependiente|1. CRUD Habitación {depende de} CRUD Tipo Habitacion<br>2. CRUD Cliente {depende de} CRUD Localidad|
-|Listado<br>+<br>detalle| 1. Listado de habitaciones filtrado por tipo de habitación, muestra nro y tipo de habitación => detalle CRUD Habitacion<br> 2. Listado de reservas filtrado por rango de fecha, muestra nro de habitación, fecha inicio y fin estadía, estado y nombre del cliente => detalle muestra datos completos de la reserva y del cliente|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva|
+|CRUD simple|1. CRUD Usuarios<br>2. CRUD Permision<br>3. CRUD Tipo de pago|
+|CRUD dependiente|1. CRUD Venta {depende de} CRUD Productos y CRUD Tipo de pago<br>2. CRUD Productos {depende de} CRUD SubCategoria |
+|Listado<br>+<br>detalle| 1. Listado de Producto filtrado por mas vendido, muestra nro y nombre,cantidad,stock,fecha<br> 2. Listado de producto filtrado por categoria, muestra Codigo, nombre y stock|
+|CUU/Epic|1. Vender producto<br>2.Finalizar compra.
 
 
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD |1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad<br>4. CRUD Provincia<br>5. CRUD Habitación<br>6. CRUD Empleado<br>7. CRUD Cliente|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva<br>3. Realizar el check-out y facturación de estadía y servicios|
+|CRUD |1. CRUD Categoria<br><br>2. CRUD Presentacion<br>3. CRUD Menu<br>4. CRUD Localidad<br>5. CRUD Provincia<br>6. CRUD Pais<br>7. CRUD Punto<br>8. CRUD SubCategoria
+<br>9. CRUD SubMenu<br>10.CRUD Lote|
+|CUU/Epic|1. Crear la subcategoria<br>2. Crear SubMenu|
 
 
 ### Alcance Adicional Voluntario
 
-*Nota*: El Alcance Adicional Voluntario es opcional, pero ayuda a que la funcionalidad del sistema esté completa y será considerado en la nota en función de su complejidad y esfuerzo.
+*Nota*: El Alcance Adicional Voluntario es opcional, Cada vez que un cliente realiza una compra el sistema asignara un valor en puntos dependiendete del monto total, a mayor monto mas puntos. Esto beneficiara al cliente con descuentos conforme a la cantidad de puntos que haya obtenido.
 
 |Req|Detalle|
 |:-|:-|
-|Listados |1. Estadía del día filtrado por fecha muestra, cliente, habitaciones y estado <br>2. Reservas filtradas por cliente muestra datos del cliente y de cada reserve fechas, estado cantidad de habitaciones y huespedes|
-|CUU/Epic|1. Consumir servicios<br>2. Cancelación de reserva|
+|Listados |1. CRUD Punto <br>2.Punto por vencer|
+|CUU/Epic|1. Cajear punto|
 |Otros|1. Envío de recordatorio de reserva por email|
 
